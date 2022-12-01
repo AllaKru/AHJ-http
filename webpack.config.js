@@ -2,13 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   resolve: {
     // modules: [...],
     fallback: {
-      "fs": false,
+      fs: false,
       // "tls": false,
       // "net": false,
       // "path": false,
@@ -18,7 +18,7 @@ module.exports = {
       // "stream": false,
       // "crypto": false,
 
-    }
+    },
   },
   target: 'web',
   devtool: 'inline-source-map',

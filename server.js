@@ -1,10 +1,16 @@
+/* eslint-disable no-console */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-vars */
 // import Ticket from './tickets';
 // сработало только рекуире!
 // const tic = require('./src/tickets');
+// eslint-disable-next-line no-unused-vars
 const http = require('http');
 const koa = require('koa');
+// eslint-disable-next-line no-unused-vars
 const url = require('url');
 const path = require('path');
+// eslint-disable-next-line no-unused-vars
 const fs = require('fs');
 const uuid = require('uuid');
 const koaStatic = require('koa-static');
@@ -12,6 +18,7 @@ const koaBody = require('koa-body');
 const multer = require('koa-multer');
 const { count } = require('console');
 
+// eslint-disable-next-line new-cap
 const app = new koa();
 const port = 7070 || process.env.PORT;
 const publicc1 = path.join(__dirname, '/public');
@@ -106,6 +113,7 @@ app.use(async (ctx) => {
 
     switch (method) {
       case 'delete':
+        // eslint-disable-next-line no-plusplus
         for (let i = 0; i <= ticket.length; i++) {
           if (id === ticket[i].id) {
             ctx.response.body = ticket[i];
