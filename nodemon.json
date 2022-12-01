@@ -1,0 +1,6 @@
+{
+   "verbose": true,
+   "env": {
+      "PRIVATE_KEY": "TEST"
+   }
+}

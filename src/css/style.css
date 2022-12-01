@@ -1,0 +1,221 @@
+.input {
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  outline: none;
+}
+
+.input.valid {
+  border: 1px solid green;
+}
+
+.input.error {
+  border: 1px solid red;
+}
+.body{
+  background-color: rgb(240, 214, 205);
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+ 
+  /* align-items: center; */
+}
+.container{
+  display: flex;
+  width: 1200px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.first{
+  position: absolute;
+  left: 10px;
+}
+.form-control {
+  position: relative;
+  margin-bottom: 5px;
+}
+.div{
+  display: flex;
+  width: 1200px;
+  /* margin: auto; */
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid darkblue;
+  font: 1.2em "Fira Sans", sans-serif;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: .25rem;
+  
+}
+.notes{
+display: flex;
+flex-direction: row;
+align-items:center;
+justify-content: space-around;
+
+}
+.notes2{
+  display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-around;
+/* position: relative; */
+}
+.note{
+  margin-right: 0.5em;
+  
+}
+.note2{
+  /* position: absolute;
+  top: 50px;
+  left: 290px; */
+  margin: 1em;
+  border: 1px blue dotted;
+  border-radius: 5px;
+  padding: 15px;
+  /* display: block; */ 
+  
+}
+.checkbox{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  /* border-color: #0b76ef; */
+}
+.highload2 {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.label .checkbox ~.highload2::after {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: .25rem;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.checkbox:checked ~.highload2::after{
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+/* стили при наведении курсора на checkbox */
+.checkbox:not(:disabled):not(:checked)~.highload2:hover::after {
+  border-color: #b3d7ff;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.checkbox:not(:disabled):active ~.highload2::after {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.checkbox:focus ~.highload2::after {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.checkbox:focus:not(:checked) ~.highload2::after {
+  border-color: #80bdff;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.checkbox:disabled ~.highload2::after{
+  background-color: #e9ecef;
+}
+.li{
+  list-style-type: none;
+}
+.highload{
+  /* content: '';*/
+   /* display: inline-block; */
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: .25rem;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  padding: 5px;
+  cursor: default;
+  /* vertical-align:top; */
+  /*!!!!!!!!!!!!*/
+  text-align: center;
+}
+.highload:hover{
+
+  border-color: #b3d7ff;
+}
+.highload:active{
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.redaktor{
+   /* display: inline-block; */
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/edit.png");  
+  /* cursor: url("../img/package_development.png"), auto; */
+}
+.highload:hover{
+  border-color: #89b6e9;
+  background-color: #89b6e9;
+}
+.ticket{
+  /* width: 500px;
+  height: 200px; */
+  /* border: 1px solid blue; */
+  position: absolute;
+  top: 50px;
+  left: 290px;
+  z-index: 999;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #80bdff;
+  /* justify-content: center;
+  align-items: center; */
+  /* margin: auto 450px; */
+}
+.text{
+  
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  border: 1px solid #ced4da;
+}
+.invisible{
+  display: none;
+}
+.notinvisible{
+  display: block;
+}
+
+
