@@ -11,4 +11,4 @@ build:
 
   run:
   command: npm run nodemon
-  containerPort: 7070
+  # containerPort: 8080
