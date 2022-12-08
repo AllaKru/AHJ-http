@@ -58,6 +58,6 @@
   },
   "description": "",
   "engines": {
-    "node": "11.x"
+    "node": "18.x"
   }
 }
