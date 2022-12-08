@@ -1,3 +1,12 @@
+/* eslint-disable no-alert */
+/* eslint-disable no-console */
+/* eslint-disable max-len */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-shadow */
+/* eslint-disable brace-style */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-vars */
 export default class Ticket {
   constructor(element, res, xhr) {
     if (typeof element === 'string') {

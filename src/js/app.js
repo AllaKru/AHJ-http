@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 // const koa = require('koa');
 
 // const subscribeWidget = document.querySelector('[data-widget=subscribe]');
@@ -70,6 +72,7 @@ btn.addEventListener('click', (evt) => {
         console.error(e);
       }
     } else {
+      // eslint-disable-next-line no-alert
       alert(xhr.response);
       console.log(`Ошибка статус:${xhr.status}`);
     }
