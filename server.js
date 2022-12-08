@@ -27,7 +27,7 @@ app.use(cors());
 
 
 const port = 7070 || process.env.PORT;
-const public1 = path.join(__dirname, '/public');
+const public1 = path.join(__dirname, '/public1');
 app.use(koaBody({
   urlencoded: true,
   multipart: true,
