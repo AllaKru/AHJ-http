@@ -1,3 +1,5 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable comma-dangle */
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -30,6 +32,8 @@ module.exports = {
     contentBase: path.resolve(__dirname, '/dist'),
     open: true,
     compress: true,
+  },
+  stats: { children: true
   },
   module: {
     rules: [
