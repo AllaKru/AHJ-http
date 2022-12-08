@@ -45,6 +45,7 @@
     "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
+    "@koa/cors": "^4.0.0",
     "core-js": "^3.8.2",
     "forever": "^4.0.3",
     "hexoid": "^1.0.0",

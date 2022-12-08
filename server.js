@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-console */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-vars */
@@ -6,7 +7,7 @@
 // const tic = require('./src/tickets');
 // eslint-disable-next-line no-unused-vars
 const http = require('http');
-const koa = require('koa');
+const Koa = require('koa');
 // eslint-disable-next-line no-unused-vars
 const url = require('url');
 const path = require('path');
@@ -17,9 +18,13 @@ const koaStatic = require('koa-static');
 const koaBody = require('koa-body');
 const multer = require('koa-multer');
 const { count } = require('console');
+const cors = require('@koa/cors');
 
 // eslint-disable-next-line new-cap
-const app = new koa();
+const app = new Koa();
+app.use(cors());
+
+
 const port = 7070 || process.env.PORT;
 const publicc1 = path.join(__dirname, '/public');
 app.use(koaBody({
@@ -92,9 +97,9 @@ app.use(async (ctx) => {
   // console.log(ctx.request);
   // koaStatic(public);
   const { method, id } = ctx.request.query;
-  ctx.response.set({
-    'Access-Control-Allow-Origin': '*',
-  });
+  // ctx.response.set({
+  //   'Access-Control-Allow-Origin': '*',
+  // });
   if (ctx.request.method === 'GET') {
     // if (ctx.request.url === '/?method=allTickets') {
     //   ctx.response.body = ticket;
