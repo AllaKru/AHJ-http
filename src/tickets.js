@@ -87,7 +87,7 @@ export default class Ticket {
           console.log(this.res[i].id, this.res);
           const xhr = new XMLHttpRequest();
           // const { id } = this.res[i].id;
-          xhr.open('GET', `http://localhost:7070/subscribe?method=ticketById&id=${this.res[i].id}`);
+          xhr.open('GET', `https://ahj-http-zsof-8bfhpojw4-allakru.vercel.app/method=ticketById&id=${this.res[i].id}`);
           xhr.send();
           xhr.addEventListener('load', () => {
             if (xhr.status === 200) {
@@ -163,7 +163,7 @@ export default class Ticket {
         ticket.remove();
 
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost:7070/subscribe?method=createTicket');
+        xhr.open('POST', 'https://ahj-http-zsof-8bfhpojw4-allakru.vercel.app/method=createTicket');
         xhr.send(formData);
         xhr.addEventListener('load', () => {
           if (xhr.status === 200) {
@@ -314,7 +314,7 @@ export default class Ticket {
           for (let i = 0; i < this.res.length; i++) {
             const xhr = new XMLHttpRequest();
             const method = 'delete';
-            xhr.open('GET', `http://localhost:7070/subscribe?method=delete&id=${this.res[i].id}`);
+            xhr.open('GET', `https://ahj-http-zsof-8bfhpojw4-allakru.vercel.app/method=delete&id=${this.res[i].id}`);
 
             if (e.target.closest('.div').querySelector('.note').textContent === this.res[i].name) {
               xhr.addEventListener('load', () => {
@@ -384,7 +384,7 @@ export default class Ticket {
               for (let i = 0; i < this.res.length; i++) {
                 const xhr = new XMLHttpRequest();
                 const method = 'redact';
-                xhr.open('POST', `http://localhost:7070/subscribe?method=redact&id=${this.res[i].id}`);
+                xhr.open('POST', `https://ahj-http-zsof-8bfhpojw4-allakru.vercel.app/method=redact&id=${this.res[i].id}`);
 
                 if (e.target.closest('.div').querySelector('.note').textContent === this.res[i].name) {
                   xhr.addEventListener('load', () => {

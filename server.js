@@ -37,7 +37,7 @@ app.use(
 
 
 const port = 7070 || process.env.PORT;
-const public1 = path.join(__dirname, '/public1');
+const public1 = path.join(__dirname, '/public');
 app.use(koaBody({
   urlencoded: true,
   multipart: true,
@@ -108,9 +108,9 @@ app.use(async (ctx) => {
   // console.log(ctx.request);
   // koaStatic(public);
   const { method, id } = ctx.request.query;
-  // ctx.response.set({
-  //   'Access-Control-Allow-Origin': '*',
-  // });
+  ctx.response.set({
+    'Access-Control-Allow-Origin': '*',
+  });
   if (ctx.request.method === 'GET') {
     // if (ctx.request.url === '/?method=allTickets') {
     //   ctx.response.body = ticket;
