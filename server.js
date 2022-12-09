@@ -24,16 +24,16 @@ const { count } = require('console');
 const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();
-// app.use(cors());
-app.use(
-  cors({
-    origin: '*',
-    credentials: true,
-    'Access-Control-Allow-Origin': true,
-    allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-    // eslint-disable-next-line comma-dangle
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: '*',
+//     credentials: true,
+//     'Access-Control-Allow-Origin': true,
+//     allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     // eslint-disable-next-line comma-dangle
+//   })
+// );
 
 
 const port = process.env.PORT || 7070;
@@ -220,9 +220,9 @@ app.use(async (ctx) => {
   // ctx.response.write(7777777777777);
   // ctx.response.end('Пока');
 });
-// app.listen(port, () => {
-//   console.log('Server running on https://localhost:7070');
-// });
-const server = http.createServer(app.callback()).listen(port);
+app.listen(port, () => {
+  console.log(`Server running on ${port}`);
+});
+// const server = http.createServer(app.callback()).listen(port);
 console.log(122323, port);
 // const server = http.createServer(app.callback()).listen(8080);
