@@ -8,6 +8,7 @@
 // const tic = require('./src/tickets');
 // eslint-disable-next-line no-unused-vars
 const http = require('http');
+const https = require('https');
 const Koa = require('koa');
 // eslint-disable-next-line no-unused-vars
 const url = require('url');
@@ -19,11 +20,20 @@ const koaStatic = require('koa-static');
 const koaBody = require('koa-body');
 const multer = require('koa-multer');
 const { count } = require('console');
-const cors = require('@koa/cors');
-
+// const cors = require('@koa/cors');
+const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+    credentials: true,
+    'Access-Control-Allow-Origin': true,
+    allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
+  // eslint-disable-next-line comma-dangle
+  })
+);
 
 
 const port = 7070 || process.env.PORT;
