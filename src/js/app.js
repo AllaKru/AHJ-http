@@ -57,16 +57,16 @@ btn.addEventListener('click', (evt) => {
         if (btn.classList.contains('done')) {
           // xhr.abort();
         }
-        const data = JSON.parse(xhr.response);
-
+        // const data = JSON.parse(xhr.responseText);
+        console.log(xhr.response);
         // data.forEach(element => {
 
         // });
         // bod.create(ticket);
-        bod.create(data);
-        btn.className = 'btn first done';
-        // bod.rename();
-        console.log('ответ сервера', data, xhr.response);
+        // bod.create(data);
+        // btn.className = 'btn first done';
+        // // bod.rename();
+        // console.log('ответ сервера', data, xhr.response);
         // bod.desk();
         // bod.onReload();
 

@@ -145,7 +145,7 @@ app.use(async (ctx) => {
       case 'allTickets':
         ctx.response.body = ticket;
         // console.log(ctx.request.query);
-        // console.log(ctx.res);
+        console.log(port);
         return;
       case 'ticketById':
 
