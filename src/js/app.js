@@ -46,8 +46,9 @@ btn.addEventListener('click', (evt) => {
   const xhr = new XMLHttpRequest();
   const method = 'allTickets';
   // xhr.open('GET', `http://localhost:8080/subscribe?method=${formData.get('method')}&id=${formData.get('id')}`);
-  xhr.open('GET', `http://localhost:7070/subscribe?method=${method}`);
-  // xhr.open('GET', `https://ahj-http-zsof-8bfhpojw4-allakru.vercel.app/method=${method}`);
+  // xhr.open('GET', `http://localhost:7070/subscribe?method=${method}`);
+  // eslint-disable-next-line indent
+  xhr.open('GET', `https://ahj-http-allakru.vercel.app/method=${method}`);
   const bod = new Ticket('.main');
   xhr.addEventListener('load', () => {
     if (xhr.status === 200) {
