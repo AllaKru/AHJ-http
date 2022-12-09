@@ -220,8 +220,9 @@ app.use(async (ctx) => {
   // ctx.response.write(7777777777777);
   // ctx.response.end('Пока');
 });
-app.listen(port, () => {
-  console.log('Server running on https://localhost:7070');
-});
+// app.listen(port, () => {
+//   console.log('Server running on https://localhost:7070');
+// });
+const server = http.createServer(app.callback()).listen(port);
 console.log(122323, process.env.PRIVATE_KEY);
 // const server = http.createServer(app.callback()).listen(8080);
