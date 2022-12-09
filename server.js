@@ -31,12 +31,12 @@ app.use(
     credentials: true,
     'Access-Control-Allow-Origin': true,
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-  // eslint-disable-next-line comma-dangle
+    // eslint-disable-next-line comma-dangle
   })
 );
 
 
-const port = 7070 || process.env.PORT;
+const port = process.env.PORT || 7070;
 const public1 = path.join(__dirname, '/public');
 app.use(koaBody({
   urlencoded: true,
@@ -224,5 +224,5 @@ app.use(async (ctx) => {
 //   console.log('Server running on https://localhost:7070');
 // });
 const server = http.createServer(app.callback()).listen(port);
-console.log(122323, process.env.PRIVATE_KEY);
+console.log(122323, port);
 // const server = http.createServer(app.callback()).listen(8080);
