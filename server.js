@@ -36,8 +36,9 @@ app.use(cors());
 // );
 
 
-const port = process.env.PORT || 7070;
-console.log(process.env.PORT);
+// const port = process.env.PORT || 7070;
+const port = process.env.API_URL || 7070;
+console.log(`proc - ${process.env.PORT} `);
 const public1 = path.join(__dirname, '/public');
 app.use(koaBody({
   urlencoded: true,
