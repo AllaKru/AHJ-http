@@ -1,5 +1,6 @@
 import './css/style.css';
 
+// import '../server';
 import './js/app';
 import './tickets';
 // import '../server';
