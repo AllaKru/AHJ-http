@@ -48,6 +48,7 @@ btn.addEventListener('click', (evt) => {
 
   // xhr.open('GET', `http://localhost:8080/subscribe?method=${formData.get('method')}&id=${formData.get('id')}`);
   xhr.open('GET', `/?method=${method}`);
+  console.log(process.env)
   // eslint-disable-next-line indent
   // xhr.open('GET', `https://ahj-http-allakru.vercel.app/method=${method}`);
   const bod = new Ticket('.main');

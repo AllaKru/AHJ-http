@@ -21,10 +21,15 @@ const koaBody = require('koa-body');
 const multer = require('koa-multer');
 const { count } = require('console');
 const cors = require('@koa/cors');
+const public = path.join(__dirname, '/public');
 // const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();
 app.use(cors());
+app.use(koaBody({
+  urlencoded: true,
+  multipart: true,
+}));
 // app.use(
 //   cors({
 //     origin: '*',
@@ -35,15 +40,11 @@ app.use(cors());
 //   })
 // );
 
-
 const port = process.env.PORT || 7070;
 // const port = process.env.API_URL || 7070;
-console.log(`proc - ${process.env.PORT} `);
-const public1 = path.join(__dirname, '/public');
-app.use(koaBody({
-  urlencoded: true,
-  multipart: true,
-}));
+console.log(`proc - ${process.env.PORT}, ${process.env}, `);
+
+
 // app.use(multer());
 
 // app.use(function *() {
@@ -100,6 +101,7 @@ const ticketFull = [{
 //   }
 // });
 // server.listen(port);
+// export default app;
 app.use(async (ctx) => {
   // ctx.response.body = 'server response';
 
@@ -222,9 +224,10 @@ app.use(async (ctx) => {
   // ctx.response.write(7777777777777);
   // ctx.response.end('Пока');
 });
-app.listen(port, () => {
-  console.log(`Server runnings on ${port}`);
-});
-// const server = http.createServer(app.callback()).listen(port);
+// app.listen(port, () => {
+//   console.log(`Server runnings on ${port}`);
+// });
+const server = http.createServer(app.callback()).listen(port);
 console.log(122323, port);
+module.exports = app;
 // const server = http.createServer(app.callback()).listen(8080);
