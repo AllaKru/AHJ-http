@@ -48,7 +48,7 @@ btn.addEventListener('click', (evt) => {
 
   // xhr.open('GET', `http://localhost:8080/subscribe?method=${formData.get('method')}&id=${formData.get('id')}`);
   console.log(process.env);
-  xhr.open('GET', `/?method=${method}`);
+  xhr.open('GET', `http://localhost:7070/?method=${method}`);
   console.log(process.env);
   // eslint-disable-next-line indent
   // xhr.open('GET', `https://ahj-http-allakru.vercel.app/method=${method}`);
