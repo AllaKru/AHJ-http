@@ -10,5 +10,5 @@ build:
 #   additionalCommands: npm run amvera:build
 
   run:
-  command: npm run nodemon
-  # containerPort: 8080
+  command: npm run start
+  containerPort: 8080
