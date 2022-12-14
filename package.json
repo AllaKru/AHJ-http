@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start2": "webpack serve --mode development",
+    "start2": "forever api/server.js ",
+    "start3": "node src/index.js ",
     "prestart": "npm install",
-    "start": "forever api/server.js",
+    "start": "webpack serve --mode development",
     "nodemon": "nodemon api/server.js",
     "watch": "forever -w server.js",
     "build": "webpack --mode production",
