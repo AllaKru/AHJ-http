@@ -44,7 +44,7 @@ app.use(koaBody({
 // );
 
 // const port = process.env.PORT || 7070;
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 7070;
 // const port = process.env.API_URL || 7070;
 console.log(`proc - ${process.env.PORT}, ${process.env}, `);
 
