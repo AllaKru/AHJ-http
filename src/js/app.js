@@ -48,6 +48,8 @@ btn.addEventListener('click', (evt) => {
 
   // xhr.open('GET', `http://localhost:8080/subscribe?method=${formData.get('method')}&id=${formData.get('id')}`);
   console.log(process.env);
+  // xhr.open('GET', `https://ahj-http-git-gh-pages-allakru.vercel.app/?method=${method}`);
+  // xhr.open('GET', `https://http-mlhe.onrender.com/?method=${method}`);
   xhr.open('GET', `http://localhost:7070/?method=${method}`);
   console.log(process.env);
   // eslint-disable-next-line indent
@@ -59,6 +61,7 @@ btn.addEventListener('click', (evt) => {
         if (btn.classList.contains('done')) {
           // xhr.abort();
         }
+        console.log('ответ сервера', xhr.response);
         const data = JSON.parse(xhr.responseText);
 
         // data.forEach(element => {

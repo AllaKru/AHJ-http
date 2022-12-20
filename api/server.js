@@ -23,7 +23,7 @@ const multer = require('koa-multer');
 const { count } = require('console');
 const cors = require('@koa/cors');
 
-const public1 = path.join(__dirname, '/public');
+const public1 = path.join(__dirname, '/public1');
 // const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();
@@ -108,7 +108,7 @@ const ticketFull = [{
 // export default app;
 app.use(async (ctx) => {
   // ctx.response.body = 'server response';
-
+  console.log('Запрос 1');
   // if (ctx.request.url === '/subscribe?name=alla&phone=89055495395') {
   // console.log(1234567);
   // ctx.response.status = 200;
@@ -120,6 +120,7 @@ app.use(async (ctx) => {
     'Access-Control-Allow-Origin': '*',
   });
   if (ctx.request.method === 'GET') {
+    console.log('Запрос 2');
     // if (ctx.request.url === '/?method=allTickets') {
     //   ctx.response.body = ticket;
     //   // ctx.response.res.end(ticket);
@@ -153,7 +154,7 @@ app.use(async (ctx) => {
       case 'allTickets':
         ctx.response.body = ticket;
         // console.log(ctx.request.query);
-        console.log(port);
+        console.log('Запрос 3');
         return;
       case 'ticketById':
 
@@ -233,5 +234,11 @@ app.use(async (ctx) => {
 // });
 const server = http.createServer(app.callback()).listen(port);
 console.log(122323, port);
-module.exports = app;
+module.exports = { app };
 // const server = http.createServer(app.callback()).listen(8080);
+// export default function handler(request, response) {
+//   // api/[name].js -> /api/lee
+//   // req.query.name -> "lee"
+//   const { name } = request.query;
+//   return response.end(`Hello ${name}!`);
+// }

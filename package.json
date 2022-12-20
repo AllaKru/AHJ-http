@@ -8,7 +8,7 @@
     "prestart": "npm install",
     "start": "webpack serve --mode development",
     "nodemon": "nodemon api/server.js",
-    "watch": "forever -w server.js",
+    "watch": "forever -w api/server.js",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "test": "jest --passWithNoTests",
@@ -23,7 +23,6 @@
   },
   "author": "coursar",
   "license": "MIT",
- 
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
