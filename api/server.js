@@ -23,7 +23,7 @@ const multer = require('koa-multer');
 const { count } = require('console');
 const cors = require('@koa/cors');
 
-const public = path.join(__dirname, '/public');
+const public1 = path.join(__dirname, '/public');
 // const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();

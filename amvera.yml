@@ -11,4 +11,4 @@ build:
 
   run:
   command: npm run start
-  containerPort: 8080
+  containerPort: 7070
