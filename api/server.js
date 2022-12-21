@@ -8,7 +8,13 @@
 // const tic = require('./src/tickets');
 // eslint-disable-next-line no-unused-vars
 // import { readFileSync } from 'fs';
-
+// const appInfo = {
+//   appName: 'My App',
+//   apiDomain: process.env.VERCEL_URL,
+//   websiteDomain: process.env.VERCEL_URL,
+//   apiBasePath: '/api/auth',
+//   websiteBasePath: '/auth',
+// };
 const http = require('http');
 const https = require('https');
 const Koa = require('koa');
@@ -235,7 +241,7 @@ app.use(async (ctx) => {
 // });
 const server = http.createServer(app.callback()).listen(port);
 console.log(122323, port);
-module.exports = { app };
+module.exports = app;
 // const server = http.createServer(app.callback()).listen(8080);
 // export default function handler(request, response) {
 //   // api/[name].js -> /api/lee
@@ -253,4 +259,4 @@ function handler(req, res) {
   res.setHeader('Content-Type', 'application/json');
   return res.end(stringified);
 }
-module.exports = { handler };
+module.exports = handler;
