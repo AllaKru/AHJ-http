@@ -7,6 +7,7 @@
 // сработало только рекуире!
 // const tic = require('./src/tickets');
 // eslint-disable-next-line no-unused-vars
+// import { readFileSync } from 'fs';
 
 const http = require('http');
 const https = require('https');
@@ -242,3 +243,14 @@ module.exports = { app };
 //   const { name } = request.query;
 //   return response.end(`Hello ${name}!`);
 // }
+
+// import path from 'path';
+
+function handler(req, res) {
+  const file = path.join(process.cwd(), 'files', 'test.json');
+  const stringified = fs(file, 'utf8');
+
+  res.setHeader('Content-Type', 'application/json');
+  return res.end(stringified);
+}
+module.exports = { handler };
