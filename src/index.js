@@ -1,6 +1,6 @@
 // import './css/style.css';
 
-// import '../api/server';
+// import '../api/server2';
 import './js/app';
 import './tickets';
 import './css/style.css';

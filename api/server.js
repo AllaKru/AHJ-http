@@ -30,7 +30,7 @@ const multer = require('koa-multer');
 const { count } = require('console');
 const cors = require('@koa/cors');
 
-const public1 = path.join(__dirname, '/public1');
+const public1 = path.join(__dirname, '/public');
 // const cors = require('koa2-cors');
 // eslint-disable-next-line new-cap
 const app = new Koa();
@@ -242,6 +242,7 @@ app.use(async (ctx) => {
 const server = http.createServer(app.callback()).listen(port);
 console.log(122323, port);
 module.exports = app;
+
 // const server = http.createServer(app.callback()).listen(8080);
 // export default function handler(request, response) {
 //   // api/[name].js -> /api/lee
@@ -252,11 +253,30 @@ module.exports = app;
 
 // import path from 'path';
 
-function handler(req, res) {
-  const file = path.join(process.cwd(), 'files', 'test.json');
-  const stringified = fs(file, 'utf8');
+// function handler(req, res) {
+//   const file = path.join(process.cwd(), 'files', 'test.json');
+//   const stringified = fs(file, 'utf8');
 
-  res.setHeader('Content-Type', 'application/json');
-  return res.end(stringified);
-}
-module.exports = handler;
+//   res.setHeader('Content-Type', 'application/json');
+//   return res.end(stringified);
+// }
+// module.exports = handler;
+
+// import Koa from 'koa';
+
+// const Product = () => {
+//   const router = useRouter();
+//   const { name } = router.query;
+
+//   return (
+//     // `name` is defined after hydrating client-side
+//     name && (
+//       <div>
+//         <h1>{name}</h1>
+//         <p>Welcome to our product page for {name}!</p>
+//       </div>
+//     )
+//   );
+// };
+
+// export default Product;
