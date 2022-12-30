@@ -3,7 +3,8 @@
   "env": {
      "es6": true,
      "browser": true,
-     "jest": true
+     "jest": true,
+     "commonjs": true
   },
   "rules": {
     "no-restricted-syntax": [
@@ -11,5 +12,10 @@
       "LabeledStatement",
       "WithStatement"
     ]
-  }
+  },
+  
+  "parserOptions": {
+    "sourceType": "module"
+    // "ecmaVersion": "latest"
+}
 }

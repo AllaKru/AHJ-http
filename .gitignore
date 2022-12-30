@@ -1,5 +1,6 @@
-doc
 dist
+doc
+dist/
 # vercel.json
 # public
 
