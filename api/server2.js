@@ -47,7 +47,7 @@ import path from 'path';
 // const cors = require('@koa/cors');
 
 // eslint-disable-next-line no-unused-vars
-const public1 = path.join(__dirname, '/public');
+const public = path.join(__dirname, '/public');
 
 const app = new Koa();
 
